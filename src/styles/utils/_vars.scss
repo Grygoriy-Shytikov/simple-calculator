@@ -1,0 +1,46 @@
+$themes: (
+  light: (
+    bgHeaderColor: #c9c9c9,
+    headerBorderColor: #0000003d,
+
+    bgThemeToggler: #bfbfbf,
+
+    bgCalcContainerColor: #e9e9e9,
+    bgCalcColor: #c9c9c9,
+
+    btnColor: #ededed,
+    btnResetColor: #e97676,
+    btnHoverColor: #f8f8f8,
+    btnActiveColor: #222,
+
+    btnShadowColor: #223c5066,
+    CalcShadowColor: #223c5066,
+
+    fontColor:#222,
+    fontColor2:#333,
+    fontActiveColor:#f8f8f8,
+    fontHoverColor:#2e2e2e,
+  ),
+  dark: (
+    bgHeaderColor: #292929,
+    headerBorderColor: #222,
+
+    bgThemeToggler: #494949,
+
+    bgCalcContainerColor: #222222,
+    bgCalcColor: #181818,
+
+    btnColor: #222,
+    btnResetColor: #4f0000,
+    btnHoverColor: #2e2e2e,
+    btnActiveColor: #ededed,
+
+    btnShadowColor: #000000,
+    CalcShadowColor: #000000,
+
+    fontColor:#ededed,
+    fontColor2:#acacac,
+    fontActiveColor:#2e2e2e,
+    fontHoverColor:#ededed,
+  ),
+);

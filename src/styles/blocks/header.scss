@@ -1,0 +1,37 @@
+.header {
+  height: 50px;
+  padding: 5px 10px;
+
+  @include themify($themes) {
+    background-color: themed("bgHeaderColor");
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 720px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -2px;
+
+    @include themify($themes) {
+      color: themed("fontColor");
+    }
+
+    &::after {
+      content: " CALCULATOR";
+      font-size: 14px;
+      letter-spacing: 3px;
+      font-weight: normal;
+    }
+  }
+}

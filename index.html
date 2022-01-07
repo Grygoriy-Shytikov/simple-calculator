@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="src/icons/favicon.png">
+    <link
+      rel="stylesheet"
+      href="./src/styles/styles.css">
+    <script
+      src="/src/js/index.js"
+      type="module"
+      defer></script>
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </head>
+
+  <body class="theme-light theme-dark">
+    <header class="header">
+      <div class="header__wrapper">
+        <a href="javascript:void(0)" class="header__logo">Simple</a>
+        <div class="header__theme-toggler theme-toggler">
+          <input
+            class="theme-toggler__input"
+            type="checkbox"
+            id="theme-toggler"
+            name="theme" />
+          <label class="theme-toggler__label" for="theme-toggler">
+            theme toggler
+          </label>
+        </div>
+      </div>
+
+    </header>
+
+    <main class="main">
+      <div class="calc__container">
+        <div class="calc">
+          <div class="calc__monitor-container">
+            <div class="calc__monitor">
+              <div class="calc__monitor-Action-container">
+                <p class="calc__monitor-X" id="monitor-X"></p>
+                <p class="calc__monitor-Action-Sign" id="monitor-action"></p>
+                <p class="calc__monitor-Y" id="monitor-Y"></p>
+                <p class="calc__monitor-Finish" id="monitor-finish"></p>
+              </div>
+              <p class="calc__monitor-Result" id="monitor-result">0</p>
+            </div>
+          </div>
+
+          <div class="calc__btn-container">
+            <button class="calc__btn reset" id="reset">AC</button>
+            <button class="calc__btn" id="delete">←</button>
+            <button class="calc__btn" id="change-sign">+/-</button>
+            <button class="calc__btn" id="percent">%</button>
+
+            <button class="calc__btn" id="num7">7</button>
+            <button class="calc__btn" id="num8">8</button>
+            <button class="calc__btn" id="num9">9</button>
+            <button class="calc__btn" id="div">/</button>
+
+            <button class="calc__btn" id="num4">4</button>
+            <button class="calc__btn" id="num5">5</button>
+            <button class="calc__btn" id="num6">6</button>
+
+            <button class="calc__btn" id="mult">X</button>
+
+            <button class="calc__btn" id="num1">1</button>
+            <button class="calc__btn" id="num2">2</button>
+            <button class="calc__btn" id="num3">3</button>
+            <button class="calc__btn" id="sub">-</button>
+
+            <button class="calc__btn" id="num0">0</button>
+            <button class="calc__btn" id="dot">.</button>
+            <button class="calc__btn" id="result">=</button>
+            <button class="calc__btn" id="add">+</button>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </body>
+
+</html>

@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+body {
+  margin: 0;
+	padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  cursor: default;
+}

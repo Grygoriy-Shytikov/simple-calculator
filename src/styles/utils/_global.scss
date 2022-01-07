@@ -1,0 +1,14 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  transition-duration: 0.2s;
+  box-sizing: border-box;
+}
+
+body {
+  @include themify($themes) {
+    background-color: themed("backgroundColor");
+  }
+
+  width: 100%;
+  height: 100%;
+}

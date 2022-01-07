@@ -1,0 +1,141 @@
+.calc__container {
+  @include themify($themes) {
+    background-color: themed("bgCalcContainerColor");
+  }
+
+  width: 100%;
+  height: calc(100vh - 50px);
+  min-height: 538px;
+
+  margin: 0;
+
+  padding-top: 50px;
+
+  @media (max-height: 600px) {
+    padding-top: 15px;
+  }
+
+  @media (max-height: 600px) {
+    padding-top: 15px;
+  }
+
+  transition-duration: 0s;
+}
+
+.calc {
+  margin: 0 auto;
+  padding: 10px 5px;
+
+  width: 290px;
+
+  @include themify($themes) {
+    background-color: themed("bgCalcColor");
+  }
+
+  @extend %shadowCalculator;
+
+  &__monitor-container {
+    width: 270px;
+    height: 100px;
+
+    margin: 5px 5px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__monitor {
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: right;
+
+    @include themify($themes) {
+      color: themed("fontColor");
+    }
+
+    transition-duration: 0s;
+  }
+
+  &__monitor-Action-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
+
+    @include themify($themes) {
+      color: themed("fontColor2");
+    }
+  }
+
+  &__monitor-Action-container > * {
+    padding-left: 4px;
+
+    transition-duration: 0s;
+
+    font-weight: 300;
+  }
+
+  &__monitor-Result {
+    font-size: 20px;
+    line-height: 30px;
+    height: 30px;
+
+    word-wrap: break-word;
+    overflow-x: hidden;
+  }
+
+  &__monitor-Result::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    width: 60px;
+    height: 60px;
+
+    margin: 5px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    @include themify($themes) {
+      background-color: themed("btnColor");
+      color: themed("fontColor");
+    }
+
+    @extend %shadowBtn;
+
+    transition-duration: 0.15s;
+  }
+
+  &__btn:hover {
+    @include themify($themes) {
+      background-color: themed("btnHoverColor");
+      color: themed("fontHoverColor");
+    }
+
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+  }
+
+  &__btn:active,
+  .active {
+    @include themify($themes) {
+      background-color: themed("btnActiveColor");
+      color: themed("fontActiveColor");
+    }
+
+    transform: scale(1);
+    transition-duration: 0.05s;
+
+    @extend %shadowOff;
+  }
+}
