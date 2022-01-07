@@ -113,7 +113,6 @@ function enterSign(action) {
     monitorX.textContent = formatNumber(x);
     monitorAction.textContent = sign;
     monitorResult.textContent = '0';
-    console.log(x, y, sign, 'Sign');
 
     return;
   } else {

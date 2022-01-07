@@ -121,22 +121,22 @@
         background-color: themed("btnHoverColor");
         color: themed("fontHoverColor");
       }
-  
+
       transform: scale(1.1);
       transition-duration: 0.1s;
     }
+  }
 
-    &:active,
-    .active {
-      @include themify($themes) {
-        background-color: themed("btnActiveColor");
-        color: themed("fontActiveColor");
-      }
-  
-      transform: scale(1);
-      transition-duration: 0.05s;
-  
-      @extend %shadowOff;
+  &__btn:active,
+  .active {
+    @include themify($themes) {
+      background-color: themed("btnActiveColor");
+      color: themed("fontActiveColor");
     }
+
+    transform: scale(1);
+    transition-duration: 0.05s;
+
+    @extend %shadowOff;
   }
 }
