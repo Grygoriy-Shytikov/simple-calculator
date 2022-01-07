@@ -22,6 +22,7 @@
     font-size: 30px;
     font-weight: 900;
     letter-spacing: -2px;
+    outline: none;
 
     @include themify($themes) {
       color: themed("fontColor");

@@ -10,12 +10,14 @@
     left: 0;
 
     cursor: pointer;
+    outline: none;
+
     text-indent: -9999px;
     width: 26px;
     height: 26px;
     float: right;
     border-radius: 100px;
-    position: absolute;
+
 
     @include themify($themes) {
       background-color: themed("bgThemeToggler");

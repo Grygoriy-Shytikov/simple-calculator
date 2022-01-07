@@ -87,6 +87,7 @@ body {
   font-size: 30px;
   font-weight: 900;
   letter-spacing: -2px;
+  outline: none;
 }
 .theme-light .header__logo {
   color: #222;
@@ -112,12 +113,12 @@ body {
   top: 6px;
   left: 0;
   cursor: pointer;
+  outline: none;
   text-indent: -9999px;
   width: 26px;
   height: 26px;
   float: right;
   border-radius: 100px;
-  position: absolute;
 }
 .theme-light .theme-toggler__label {
   background-color: #bfbfbf;
@@ -248,6 +249,7 @@ body {
   margin: 5px;
   font-size: 30px;
   cursor: pointer;
+  outline: none;
   transition-duration: 0.15s;
 }
 .theme-light .calc__btn {
