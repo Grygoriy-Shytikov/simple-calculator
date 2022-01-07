@@ -134,7 +134,7 @@ body {
   height: 20px;
   border-radius: 90px;
   transition: 0.3s;
-  background-image: url("../../../src/icons/sunny-sharp.svg");
+  background-image: url(/src/icons/sunny-sharp.svg);
   background-repeat: no-repeat;
 }
 .theme-light .theme-toggler__input:checked + label + .theme-light {
@@ -144,7 +144,7 @@ body {
   background-color: #494949;
 }
 .theme-toggler__input:checked + label:after {
-  background-image: url("../../../src/icons/moon-outline.svg");
+  background-image: url(/src/icons/moon-outline.svg);
   background-repeat: no-repeat;
 }
 .theme-toggler__input[type=checkbox] {
