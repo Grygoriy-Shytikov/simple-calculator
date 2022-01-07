@@ -22,14 +22,10 @@
     font-size: 30px;
     font-weight: 900;
     letter-spacing: -2px;
-    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @include themify($themes) {
       color: themed("fontColor");
-    }
-
-    &:focus {
-      outline: none;
     }
 
     &::after {

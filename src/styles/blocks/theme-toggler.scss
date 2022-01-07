@@ -16,14 +16,10 @@
     height: 26px;
     float: right;
     border-radius: 100px;
-
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @include themify($themes) {
       background-color: themed("bgThemeToggler");
-    }
-
-    &:focus {
-      outline: none;
     }
 
     &::after {

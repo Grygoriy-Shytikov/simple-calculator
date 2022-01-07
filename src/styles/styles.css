@@ -87,15 +87,13 @@ body {
   font-size: 30px;
   font-weight: 900;
   letter-spacing: -2px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .theme-light .header__logo {
   color: #222;
 }
 .theme-dark .header__logo {
   color: #ededed;
-}
-.header__logo:focus {
-  outline: none;
 }
 .header__logo::after {
   content: " CALCULATOR";
@@ -120,15 +118,13 @@ body {
   height: 26px;
   float: right;
   border-radius: 100px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .theme-light .theme-toggler__label {
   background-color: #bfbfbf;
 }
 .theme-dark .theme-toggler__label {
   background-color: #494949;
-}
-.theme-toggler__label:focus {
-  outline: none;
 }
 .theme-toggler__label::after {
   content: "";
@@ -254,6 +250,7 @@ body {
   font-size: 30px;
   cursor: pointer;
   transition-duration: 0.15s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .theme-light .calc__btn {
   background-color: #ededed;
@@ -262,9 +259,6 @@ body {
 .theme-dark .calc__btn {
   background-color: #222;
   color: #ededed;
-}
-.calc__btn:focus {
-  outline: none;
 }
 .calc__btn:hover {
   transform: scale(1.1);
