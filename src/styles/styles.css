@@ -247,7 +247,8 @@ body {
   width: 60px;
   height: 60px;
   margin: 5px;
-  font-size: 30px;
+  font-size: 28px;
+  line-height: 60px;
   cursor: pointer;
   transition-duration: 0.15s;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
