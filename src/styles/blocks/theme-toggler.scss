@@ -10,7 +10,6 @@
     left: 0;
 
     cursor: pointer;
-    outline: none;
 
     text-indent: -9999px;
     width: 26px;
@@ -21,6 +20,10 @@
 
     @include themify($themes) {
       background-color: themed("bgThemeToggler");
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &::after {
