@@ -145,6 +145,9 @@ function enterFinish() {
       case "*":
         x = mult(x, y);
         break;
+      case "X":
+        x = mult(x, y);
+        break;
       case "/":
         if (y === '0') {
           monitorResult.textContent = 'Error';
