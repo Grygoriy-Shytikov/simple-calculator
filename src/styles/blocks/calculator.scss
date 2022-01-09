@@ -5,17 +5,13 @@
 
   width: 100%;
   height: calc(100vh - 50px);
-  min-height: 538px;
+  min-height: 500px;
 
   margin: 0;
 
-  padding-top: 50px;
+  padding-top: 80px;
 
-  @media (max-height: 600px) {
-    padding-top: 15px;
-  }
-
-  @media (max-height: 600px) {
+  @media (max-height: 680px) {
     padding-top: 15px;
   }
 
@@ -28,7 +24,15 @@
 
   border-radius: 5px;
 
-  width: 290px;
+  width: 338px;
+
+  @media (max-width: 320px) {
+    width: 300px;
+  }
+
+  @media (max-width: 280px) {
+    width: 270px;
+  }
 
   @include themify($themes) {
     background-color: themed("bgCalcColor");
@@ -37,8 +41,16 @@
   @extend %shadowCalculator;
 
   &__monitor-container {
-    width: 270px;
+    width: 320px;
     height: 100px;
+
+    @media (max-width: 320px) {
+      width: 280px;
+    }
+
+    @media (max-width: 280px) {
+      width: 250px;
+    }
 
     margin: 5px 5px 25px;
 
@@ -49,8 +61,6 @@
 
   &__monitor {
     line-height: 25px;
-    font-size: 12px;
-    font-weight: 400;
     text-align: right;
 
     @include themify($themes) {
@@ -66,6 +76,14 @@
     justify-content: end;
     flex-wrap: wrap;
 
+    @media (max-width: 320px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 280px) {
+      font-size: 12px;
+    }
+
     @include themify($themes) {
       color: themed("fontColor2");
     }
@@ -80,9 +98,17 @@
   }
 
   &__monitor-Result {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 30px;
     height: 30px;
+
+    @media (max-width: 320px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 280px) {
+      font-size: 16px;
+    }
 
     word-wrap: break-word;
     overflow-x: hidden;
@@ -99,10 +125,20 @@
   }
 
   &__btn {
-    width: 60px;
-    height: 60px;
+    width: 76px;
+    height: 76px;
 
-    margin: 5px;
+    @media (max-width: 320px) {
+      width: 66.5px;
+      height: 64px;
+    }
+
+    @media (max-width: 280px) {
+      width: 59px;
+      height: 59px;
+    }
+
+    margin: 3px;
 
     font-size: 24px;
     line-height: 60px;
