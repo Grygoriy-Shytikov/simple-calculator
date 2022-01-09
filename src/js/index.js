@@ -45,7 +45,7 @@ const allKeys = {
 };
 
 const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
-const actionSymbols = ['+', '-', 'X', '*', '/'];
+const actionSymbols = ['+', '-', 'x', '*', '/'];
 const actionNames = ['NumpadAdd', 'NumpadSubtract', 'NumpadMultiply', 'NumpadDivide', 'Escape', 'Delete', 'Backspace', 'Enter', 'NumpadEnter'];
 
 const monitorResult = document.querySelector('#monitor-result');
@@ -108,7 +108,11 @@ function enterNumber(number) {
 
 function enterSign(action) {
   if (y === '0') {
-    sign = action;
+    if (action === '*') {
+      sign = 'x'
+    } else {
+      sign = action;
+    }
 
     monitorX.textContent = formatNumber(x);
     monitorAction.textContent = sign;
@@ -116,7 +120,11 @@ function enterSign(action) {
 
     return;
   } else {
-    sign = action;
+    if (action === '*') {
+      sign = 'x'
+    } else {
+      sign = action;
+    }
     monitorAction.textContent = sign;
     enterFinish()
   }
@@ -141,10 +149,7 @@ function enterFinish() {
       case "-":
         x = sub(x, y);
         break;
-      case "*":
-        x = mult(x, y);
-        break;
-      case "X":
+      case "x":
         x = mult(x, y);
         break;
       case "/":
