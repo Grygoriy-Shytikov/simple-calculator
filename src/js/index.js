@@ -153,7 +153,7 @@ function enterFinish() {
         x = mult(x, y);
         break;
       case "/":
-        if (y === '0') {
+        if (+y === 0) {
           monitorResult.textContent = 'Error';
           setTimeout(function () {
             reset();
