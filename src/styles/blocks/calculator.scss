@@ -1,30 +1,29 @@
 .calc__container {
-  @include themify($themes) {
-    background-color: themed("bgCalcContainerColor");
-  }
-
   width: 100%;
   height: calc(100vh - 50px);
   min-height: 500px;
 
   margin: 0;
-
   padding-top: 80px;
+
+  transition-duration: 0s;
 
   @media (max-height: 680px) {
     padding-top: 15px;
   }
 
-  transition-duration: 0s;
+  @include themify($themes) {
+    background-color: themed("bgCalcContainerColor");
+  }
 }
 
 .calc {
+  width: 338px;
+
   margin: 0 auto;
   padding: 10px 5px;
 
   border-radius: 5px;
-
-  width: 338px;
 
   @media (max-width: 320px) {
     width: 300px;
@@ -41,8 +40,14 @@
   @extend %shadowCalculator;
 
   &__monitor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     width: 320px;
     height: 100px;
+
+    margin: 5px 5px 25px;
 
     @media (max-width: 320px) {
       width: 280px;
@@ -51,23 +56,18 @@
     @media (max-width: 280px) {
       width: 250px;
     }
-
-    margin: 5px 5px 25px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
 
   &__monitor {
     line-height: 25px;
     text-align: right;
 
+    transition-duration: 0s;
+
     @include themify($themes) {
       color: themed("fontColor");
+      text-shadow: 0px 0px 13px themed("fontShadowColor");
     }
-
-    transition-duration: 0s;
   }
 
   &__monitor-Action-container {
@@ -91,32 +91,30 @@
 
   &__monitor-Action-container > * {
     padding-left: 4px;
+    font-weight: 300;
 
     transition-duration: 0s;
 
-    font-weight: 300;
-    text-align: left;
+    @include themify($themes) {
+      text-shadow: 0px 0px 13px themed("fontShadowColor");
+    }
   }
 
   &__monitor-Result {
-    font-size: 22px;
-    line-height: 30px;
     height: 30px;
 
+    font-size: 21px;
+    line-height: 30px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+
     @media (max-width: 320px) {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     @media (max-width: 280px) {
       font-size: 16px;
     }
-
-    word-wrap: break-word;
-    overflow-x: hidden;
-  }
-
-  &__monitor-Result::-webkit-scrollbar {
-    width: 0;
   }
 
   &__btn-container {
@@ -129,6 +127,25 @@
     width: 76px;
     height: 76px;
 
+    margin: 3px;
+    padding: 0;
+
+    border-radius: 5px;
+
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition-duration: 0.05s;
+    transition-duration: 1s;
+
+    -webkit-tap-highlight-color: #00000000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    touch-action: none;
+
     @media (max-width: 320px) {
       width: 66.5px;
       height: 64px;
@@ -139,51 +156,37 @@
       height: 59px;
     }
 
-    margin: 3px;
-
-    font-size: 24px;
-    line-height: 60px;
-    text-align: center;
-    padding: 0;
-
-    cursor: pointer;
-
-    border-radius: 5px;
-
-    transition-duration: 0.05s;
-    -webkit-tap-highlight-color: #00000000;
-
     @include themify($themes) {
       background-color: themed("btnColor");
       color: themed("fontColor");
+      text-shadow: 0px 0px 13px themed("fontShadowColor");
     }
-
-    touch-action: none;
 
     @extend %shadowBtn;
 
     @media (hover: hover) {
       &:hover {
+        transform: scale(0.95);
+        transition-duration: 0s;
+
         @include themify($themes) {
           background-color: themed("btnHoverColor");
           color: themed("fontHoverColor");
         }
-
-        transform: scale(1.1);
-        transition-duration: 0.1s;
       }
     }
   }
 
   &__btn:active,
   .active {
+    transform: scale(0.95);
+    transition-duration: 0s;
+
     @include themify($themes) {
       background-color: themed("btnActiveColor");
       color: themed("fontActiveColor");
+      text-shadow: 0px 0px 25px themed("fontActiveShadowColor");
     }
-
-    transform: scale(1);
-    transition-duration: 0.05s;
 
     @extend %shadowOff;
   }

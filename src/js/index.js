@@ -107,24 +107,19 @@ function enterNumber(number) {
 }
 
 function enterSign(action) {
-  if (y === '0') {
-    if (action === '*') {
-      sign = 'x'
-    } else {
-      sign = action;
-    }
+  if (action === '*') {
+    sign = 'x'
+  } else {
+    sign = action;
+  }
 
+  if (y === '0') {
     monitorX.textContent = formatNumber(x);
     monitorAction.textContent = sign;
     monitorResult.textContent = '0';
 
     return;
   } else {
-    if (action === '*') {
-      sign = 'x'
-    } else {
-      sign = action;
-    }
     monitorAction.textContent = sign;
     enterFinish()
   }
