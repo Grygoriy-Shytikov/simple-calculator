@@ -229,7 +229,7 @@ body {
 .calc__monitor-Action-container {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: right;
   flex-wrap: wrap;
 }
 @media (max-width: 320px) {
