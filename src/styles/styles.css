@@ -253,6 +253,7 @@ body {
   transition-duration: 0s;
   font-weight: 300;
   text-align: left;
+  border: 1px dotted #8d8d8d;
 }
 .calc__monitor-Result {
   font-size: 22px;
