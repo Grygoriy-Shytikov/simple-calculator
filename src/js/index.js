@@ -202,11 +202,18 @@ function enterChangeSign() {
 }
 
 function enterPercent() {
+  if (x === '0') {
+    reset();
+    return;
+  }
+
   if (monitorX !== '' && monitorAction !== '' && monitorFinish !== '=') {
     y = String((+y * +x) / 100);
     monitorY.textContent = formatNumber(y);
-    monitorResult.textContent = formatNumber(y);
+    enterFinish();
+    x = '0';
   } else {
+    reset();
     return;
   }
 }
