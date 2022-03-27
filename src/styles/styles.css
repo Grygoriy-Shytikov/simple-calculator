@@ -38,6 +38,29 @@ body * {
   transition-duration: 0s;
 }
 
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #575757;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353535;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9) inset;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #272727;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.9) inset;
+  border: none;
+  border-radius: 8px;
+}
+
 .header {
   height: 50px;
   padding: 5px 10px;
