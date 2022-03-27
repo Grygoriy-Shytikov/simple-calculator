@@ -31,9 +31,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:wght@300;400&display=swap"
       rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
   </head>
 
-  <body class="theme-light theme-dark">
+  <body class="body onload theme-light">
     <header class="header">
       <div class="header__wrapper">
         <a href="javascript:void(0)" class="header__logo">Simple</a>
@@ -44,7 +46,7 @@
             id="theme-toggler"
             name="theme" />
           <label class="theme-toggler__label" for="theme-toggler">
-            theme toggler
+            <i class="theme-toggler__icon"></i>
           </label>
         </div>
       </div>
@@ -54,16 +56,14 @@
     <main class="main">
       <div class="calc__container">
         <div class="calc">
-          <div class="calc__monitor-container">
-            <div class="calc__monitor">
-              <div class="calc__monitor-Action-container">
-                <p class="calc__monitor-X" id="monitor-X"></p>
-                <p class="calc__monitor-Action-Sign" id="monitor-action"></p>
-                <p class="calc__monitor-Y" id="monitor-Y"></p>
-                <p class="calc__monitor-Finish" id="monitor-finish"></p>
-              </div>
-              <p class="calc__monitor-Result" id="monitor-result">0</p>
+          <div class="calc__monitor">
+            <div class="calc__monitor-Action-container">
+              <p class="calc__monitor-X" id="monitor-X"></p>
+              <p class="calc__monitor-Action-Sign" id="monitor-action"></p>
+              <p class="calc__monitor-Y" id="monitor-Y"></p>
+              <p class="calc__monitor-Finish" id="monitor-finish"></p>
             </div>
+            <p class="calc__monitor-Result" id="monitor-result"></p>
           </div>
 
           <div class="calc__btn-container">

@@ -3,9 +3,9 @@
 function keyboardPressEffect(event, obj) {
   for (let key in obj) {
     if (obj[key][1] === event) {
-      obj[key][0].classList.toggle('active');
+      obj[key][0].classList.add('active');
       setTimeout(function () {
-        obj[key][0].classList.toggle('active');
+        obj[key][0].classList.remove('active');
       }, 100);
     }
   }
@@ -50,19 +50,31 @@ function formatNumber(str) {
 }
 
 function add(a, b) {
-  return String(((+a * 1000) + (+b * 1000)) / 1000);
+  let c = 10;
+  let res = ((+a * c) + (+b * c)) / c;
+  res = +res.toFixed(10);
+  return String(res);
 }
 
 function sub(a, b) {
-  return String(((+a * 1000) - (+b * 1000)) / 1000);
+  let c = 10;
+  let res = ((+a * c) - (+b * c)) / c;
+  res = +res.toFixed(10);
+  return String(res);
 }
 
 function mult(a, b) {
-  return String(((+a * 1000) * (+b * 1000)) / 1000000);
+  let c = 10;
+  let d = 100;
+  let res = ((+a * c) * (+b * c)) / d;
+  return String(res);
 }
 
 function div(a, b) {
-  return String(((+a * 1000000) / (+b * 1000000)) / 1);
+  let c = 10;
+  let res = ((+a * c) / (+b * c)) / 1;
+  res = +res.toFixed(100);
+  return String(res);
 }
 
 export {

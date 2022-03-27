@@ -9,14 +9,48 @@ import {
   div,
 } from './functions.js';
 
+document.addEventListener("DOMContentLoaded", function() {
+  const body = document.querySelector('.body');
+
+  setTimeout(function () {
+    body.classList.remove('onload');
+  }, 1000);
+});
+
 // Theme-togler --------------------------------------------------------
 
 const theme = document.querySelector('.theme-light');
 const toggler = document.querySelector('#theme-toggler');
+const togglerIcon = document.querySelector('.theme-toggler__icon')
 
 toggler.addEventListener('click', () => {
-  theme.classList.toggle('theme-dark');
+  if (theme.classList.contains('theme-dark')) {
+    theme.classList.remove('theme-dark');
+    togglerIcon.classList.remove('ri-sun-fill');
+    togglerIcon.classList.add('ri-moon-fill');
+    localStorage.removeItem('theme');
+  } else {
+    theme.classList.add('theme-dark');
+    togglerIcon.classList.remove('ri-moon-fill');
+    togglerIcon.classList.add('ri-sun-fill');
+    localStorage.setItem('theme', 'dark');
+  }
+
+  theme.classList.add('theme-toggle');
+  setTimeout(function () {
+    theme.classList.remove('theme-toggle');
+  }, 150);
 });
+
+if (localStorage.getItem('theme') !== null) {
+  theme.classList.add('theme-dark');
+}
+
+if (theme.classList.contains('theme-dark')) {
+  togglerIcon.classList.add('ri-sun-fill');
+} else {
+  togglerIcon.classList.add('ri-moon-fill');
+}
 
 // Calculator ----------------------------------------------------------
 
