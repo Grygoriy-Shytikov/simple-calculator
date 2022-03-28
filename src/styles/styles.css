@@ -31,11 +31,11 @@ body * {
 }
 
 .body.onload * {
-  transition: none;
+  transition-duration: 0.3s;
 }
 
 .theme-toggle.theme-light * {
-  transition: none;
+  transition-duration: 0.3s;
 }
 
 ::-webkit-scrollbar {
