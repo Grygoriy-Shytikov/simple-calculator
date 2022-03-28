@@ -33,9 +33,19 @@ body * {
 .body.onload * {
   transition-duration: 0.3s;
 }
+@media (max-width: 415px) {
+  .body.onload * {
+    transition: none;
+  }
+}
 
 .theme-toggle.theme-light * {
   transition-duration: 0.3s;
+}
+@media (max-width: 415px) {
+  .theme-toggle.theme-light * {
+    transition: none;
+  }
 }
 
 ::-webkit-scrollbar {

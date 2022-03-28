@@ -5,10 +5,18 @@ body * {
 
 .body.onload * {
   transition-duration: 0.3s;
+
+  @media (max-width: 415px) {
+    transition: none;
+  }
 }
 
 .theme-toggle.theme-light * {
   transition-duration: 0.3s;
+
+  @media (max-width: 415px) {
+    transition: none;
+  }
 }
 
 ::-webkit-scrollbar {
