@@ -33,3 +33,9 @@ body * {
   border: none;
   border-radius: 8px;
 }
+
+::selection {
+  @include themify($themes) {
+    background-color: themed("selectionColor");
+  }
+}

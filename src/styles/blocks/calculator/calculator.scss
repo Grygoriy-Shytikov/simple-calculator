@@ -20,6 +20,9 @@
 }
 
 .calc {
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
   width: 338px;
 
   margin: 0 auto;
@@ -40,6 +43,37 @@
   }
 
   @extend %shadowCalculator;
+
+  &__shape-big,
+  &__shape-small {
+    z-index: 3;
+    content: "";
+    position: absolute;
+    pointer-events: none;
+
+    @include themify($calculator-themes) {
+      background-color: themed("shapeColor");
+    }
+
+    border-radius: 50%;
+    filter: blur(64px);
+  }
+
+  &__shape-big {
+    width: 500px;
+    height: 500px;
+
+    top: -200px;
+    left: -200px;
+  }
+
+  &__shape-small {
+    width: 250px;
+    height: 250px;
+
+    bottom: -85px;
+    right: -85px;
+  }
 
   &__monitor {
     display: flex;
@@ -120,6 +154,9 @@
   }
 
   &__btn {
+    user-select: none;
+    position: relative;
+    overflow: hidden;
     width: 76px;
     height: 76px;
 
@@ -182,5 +219,38 @@
     }
 
     @extend %shadowOff;
+  }
+
+  &__btn::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    top: -50px;
+    left: -50px;
+
+    border-radius: 50%;
+    filter: blur(24px);
+
+    @include themify($calculator-themes) {
+      background-color: themed("shapeColor");
+    }
+  }
+
+  &__btn::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    bottom: -50px;
+    right: -50px;
+    border-radius: 50%;
+    filter: blur(24px);
+
+    @include themify($calculator-themes) {
+      background-color: themed("shapeBtnColor");
+    }
   }
 }

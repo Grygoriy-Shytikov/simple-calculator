@@ -61,6 +61,13 @@ body * {
   border-radius: 8px;
 }
 
+.theme-light ::selection {
+  background-color: #ffffff;
+}
+.theme-dark ::selection {
+  background-color: #595959;
+}
+
 .header {
   height: 50px;
   padding: 5px 10px;
@@ -224,6 +231,9 @@ button {
 }
 
 .calc {
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
   width: 338px;
   margin: 0 auto;
   padding: 10px 5px;
@@ -240,10 +250,36 @@ button {
   }
 }
 .theme-light .calc {
-  background-color: #dcdcdc;
+  background-color: #cacaca;
 }
 .theme-dark .calc {
   background-color: #151515;
+}
+.calc__shape-big, .calc__shape-small {
+  z-index: 3;
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(64px);
+}
+.theme-light .calc__shape-big, .theme-light .calc__shape-small {
+  background-color: #ffffff2a;
+}
+.theme-dark .calc__shape-big, .theme-dark .calc__shape-small {
+  background-color: #ffffff05;
+}
+.calc__shape-big {
+  width: 500px;
+  height: 500px;
+  top: -200px;
+  left: -200px;
+}
+.calc__shape-small {
+  width: 250px;
+  height: 250px;
+  bottom: -85px;
+  right: -85px;
 }
 .calc__monitor {
   display: flex;
@@ -328,6 +364,9 @@ button {
   flex-wrap: wrap;
 }
 .calc__btn {
+  user-select: none;
+  position: relative;
+  overflow: hidden;
   width: 76px;
   height: 76px;
   margin: 3px;
@@ -387,13 +426,45 @@ button {
 .theme-light .calc .active {
   background-color: #101010;
   color: #ffffff;
-  text-shadow: 0px 0px 16px #fff;
+  text-shadow: 0px 0px 16px #cacacab6;
 }
 .theme-dark .calc__btn:active,
 .theme-dark .calc .active {
   background-color: #070707;
   color: #ffffff;
-  text-shadow: 0px 0px 16px #fff;
+  text-shadow: 0px 0px 16px #cacacab6;
+}
+.calc__btn::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: -50px;
+  border-radius: 50%;
+  filter: blur(24px);
+}
+.theme-light .calc__btn::before {
+  background-color: #ffffff2a;
+}
+.theme-dark .calc__btn::before {
+  background-color: #ffffff05;
+}
+.calc__btn::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: -50px;
+  right: -50px;
+  border-radius: 50%;
+  filter: blur(24px);
+}
+.theme-light .calc__btn::after {
+  background-color: #0000000e;
+}
+.theme-dark .calc__btn::after {
+  background-color: #00000010;
 }
 
 /*# sourceMappingURL=styles.css.map */
