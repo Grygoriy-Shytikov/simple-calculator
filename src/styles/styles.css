@@ -35,7 +35,7 @@ body * {
 }
 
 .theme-toggle.theme-light * {
-  transition-duration: 0s;
+  transition: none;
 }
 
 ::-webkit-scrollbar {
