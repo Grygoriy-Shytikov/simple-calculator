@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   setTimeout(function () {
     body.classList.remove('onload');
-  }, 1000);
+  }, 10);
 });
 
 // Theme-togler --------------------------------------------------------
