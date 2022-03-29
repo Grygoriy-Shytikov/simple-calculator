@@ -33,6 +33,10 @@
 
     &:hover {
       transform: rotate(90deg);
+
+      @media (max-width: 415px) {
+        transform: none;
+      }
     }
 
     cursor: pointer;

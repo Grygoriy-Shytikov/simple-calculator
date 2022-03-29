@@ -101,7 +101,7 @@ body * {
   justify-content: space-between;
   margin: 0 auto;
   width: 100%;
-  max-width: 740px;
+  max-width: 1920px;
   height: 100%;
 }
 .header__logo {
@@ -186,6 +186,11 @@ body * {
 }
 .theme-toggler__label:hover {
   transform: rotate(90deg);
+}
+@media (max-width: 415px) {
+  .theme-toggler__label:hover {
+    transform: none;
+  }
 }
 .theme-light .theme-toggler__input:checked + label + .theme-light {
   background-color: #bfbfbf;
